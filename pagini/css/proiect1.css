@@ -1,0 +1,509 @@
+* {
+    box-sizing: border-box;
+  }
+
+html{
+    font-size: 17px;  
+    background-color: white;/*pagina sa aiba culoare/imagine de background*/
+    margin-left: -5px;
+}
+
+body{
+    overflow-y: hidden;
+    padding: 0.2rem;
+    margin: 10px;
+  
+}
+
+html,body{  
+    overflow-x: hidden;
+}
+@media only screen 
+  and (min-width:768px) and (max-width:1180px)  {
+
+    body, html{
+        font-size: 40px;
+    }
+    html>img{
+        height: auto;
+        width: 100%;
+    }
+    header{
+        font-size: 30px;
+    }
+    header>img{
+        height: 80px;;
+        width: 80px;
+    }
+ 
+}
+/*crd ca mai trebuie sa fac si pentru alte dimensiuni*/
+@media only screen and (max-width:900px){
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    body{
+        padding: 0.3rem;
+        margin:0;
+    }
+
+  
+}
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color:#8CB48D;
+}
+
+header > h1{
+    flex: 1;
+    font-family: 'Open sans';
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    max-width:80%;
+}
+
+section{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:auto;
+    height:fit-content;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: white;
+}
+
+
+/*titlurile sectiunilor sa fie scrise cu alta culoare si alt font*/
+section>h2{
+    font-family: 'Open sans';
+    /*color: rgb(230, 141, 250);*/
+}
+
+/*asa se modifica stilul ancorelor;ancorele care incep cu # sa fie stilizate diferit*/
+a[href^="#"]{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+/*asa se elimina numerotarea la listele neordonate*/
+li{
+    list-style-type: none;
+}
+
+#anunturi>p::after{
+    content: "⌛";
+}
+#anunturi>p::before{
+    content: "•";
+}
+.-anunturi{
+    height: auto;
+    width: auto;
+}
+
+.orar{
+    height: auto;
+    width: auto;
+}
+.orar>h2{
+    text-align: center;
+}
+/*3 imagini pe linie*/
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.column{
+    flex: 33.33%;
+    padding: 5px;
+}
+
+figure{
+    text-align: justify;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color:#EF91AF;
+    text-align: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th{
+    background-color:#B45D79;
+}
+
+@media only screen and (max-width:900px){
+    .orar>h2{
+        text-align: left;
+    }
+    section{
+        border-style: hidden;
+    }
+}
+
+img{
+    opacity:1;
+}
+img:hover{
+    opacity:0.7;
+}
+
+a:active{
+    background-color: blue;
+}
+
+.hyperlink:hover{
+    font-size: 20px;
+}
+.hyperlink:active{
+    background-color: yellow;
+    text-decoration: none;
+}
+.bv p{
+    text-align: center;
+}
+ul.meniu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-inline-start: 0%;
+}
+ul a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+ul.meniu > li 
+{
+    /*flex-grow: 1;*/
+    width:100%;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background-color:#d58ca3;
+}
+
+nav{
+    height: 50px;
+   padding-left: 0;
+   
+}
+
+ul.submeniu{
+    display: none;
+}
+
+ul.meniu > li:hover > ul.submeniu
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+
+ul.submeniu > li
+{
+    margin-left: auto;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background-color:white;
+}
+
+.bv { grid-area: bv;  }
+.destinatii { grid-area: destinatii; }
+.-anunturi { grid-area: anunturi;  }
+.orar { grid-area: orar; }
+.galerie { grid-area: galerie;}
+
+
+
+.-galerie{grid-area: -galerie;}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 900px){   
+    .row{
+        display:block;
+      }
+}
+
+.container
+{
+    
+    display: grid;
+    height: auto;
+    width:auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    'bv bv bv bv bv'
+    'destinatii destinatii destinatii destinatii destinatii'
+    'destinatii destinatii destinatii destinatii destinatii'
+    'anunturi anunturi anunturi orar orar'
+    'galerie galerie galerie galerie galerie'
+    ;
+}
+
+@media only screen and (max-width: 900px){
+    .container{
+         width: 100%;
+         grid-template-columns: auto;
+         grid-template-rows: auto auto auto auto auto auto ;
+         grid-template-areas:
+         'bv'
+         'destinatii'
+         'anunturi'
+         'orar'
+         'galerie' ;
+     }
+
+ }
+
+header>img  {
+    transition: transform 2s;
+    height: 5rem;
+    object-fit: contain;
+
+  }
+  
+header>img:hover {
+    transform: rotate(180deg);
+    width: 200px;
+    height: 200px;
+    border-style:double;
+}
+
+
+.carte1>ul>li>b:hover{
+background-color: yellow;
+}
+
+.carte1>ul>li>b:hover{
+    background-color: yellow;
+    }
+
+.carte2>ul>li>b:hover{
+      background-color: yellow;
+        }
+
+.carte3>ul>li>b:hover{
+  background-color: yellow;
+  }
+
+.carte4>ul>li>b:hover{
+    background-color: yellow;
+    }
+section{
+    transition: width 2s linear 1s;
+}
+
+section:nth-child(5){
+    background-color:#d58ca3;
+}
+
+/*animatie*/
+@keyframes aparitie
+{
+from{ 
+    opacity:0; 
+    width: 90px;
+    height: 90px;} 
+ to{ 
+    opacity:1;
+    width: 150px;
+    height: 170px;
+}
+}
+
+figure{ 
+    text-align: center;
+    animation-name: aparitie;
+    animation-duration: 5s;}
+
+
+.carte1 {grid-area: carte1;}
+.carte2 {grid-area: carte2;}
+.carte3 {grid-area: carte3;}
+.carte4 {grid-area: carte4;}
+.-destinatii{grid-area: -destinatii;}
+
+.carte1>ul>li{
+    padding: 0;
+    margin-left: -40px;
+}
+
+.carte2>ul>li{
+    padding: 0;
+    margin-left: -40px;
+}
+
+.carte3>ul>li{
+    padding: 0;
+    margin-left: -40px;
+}
+
+.carte4>ul>li{
+    padding: 0;
+    margin-left: -40px;
+}
+
+.destinatii>ul>li>img{ 
+    margin-left: -50px;
+}
+
+h3{
+    text-align: left;
+}/*cu asta modific titlurile de la destinatii*/
+
+
+.destinatii
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    '-destinatii -destinatii -destinatii -destinatii'
+    'carte1 carte2 carte3 carte4'
+    ;
+    gap:5px;
+}
+
+@media only screen and (max-width: 900px){   
+    .destinatii{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        '-destinatii'
+        'carte1'
+        'carte2'
+        'carte3'
+        'carte4'
+         ;
+    }
+    .galerie>img{ 
+        margin-left: -50px;
+    }
+}
+.-anunturi{
+    margin-right: 10px;
+}
+footer{
+    height: 5rem;
+    background-color: #8CB48D;
+}
+
+#hp  
+{
+    float: left;    
+     margin: 0 15px 0 0;
+}
+
+#btnScrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #8CB48D;
+    color: #FFF;
+    cursor: pointer;
+  }
+  
+  #btnScrollToTop:hover {
+    background-color: #6F935E;
+  }
+  
+  input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+#articleList {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.zoom {
+    transition: transform 3s;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2);
+  }
+  
+/*de la despre-joc*/
+  .containerDespre {
+    width: 1500px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+
+  .question {
+    margin-bottom: 10px;
+  }
+
+  .options {
+    margin-bottom: 10px;
+  }
+
+  .option {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .score {
+    margin-bottom: 10px;
+  }
+
+  .win-message,
+  .lose-message {
+    display: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .button-pastel {
+    background-color: #FFB6C1;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /*eroare-contact*/
+  .error {
+    color: red;
+  }
