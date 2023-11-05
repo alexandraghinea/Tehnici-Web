@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.addEventListener("load", function(){
+       
+      var ul = document.createElement("ul");
+
+      var vectorTexte = ["soare", "flori", "examen", "ce zi frumoasa", "am uitat ceva"];
+      var vectorCreare=['1','2','3','4','5','6','7','8','9','10'];//acest vector va retine cuvinetle asociate cu fiecare element din lista
+      for (var i = 0; i < 10; i++) {
+        var li = document.createElement("li");
+        var indexRandom=Math.floor(Math.random()*5);
+        li.textContent = vectorTexte[indexRandom];
+        vectorCreare[i]= vectorTexte[indexRandom];
+        ul.appendChild(li);
+
+        li.addEventListener("click", function() {
+          var text = this.textContent;
+          var textInversat = text.split("").reverse().join("");
+          this.textContent = textInversat;
+        });
+      }
+
+      document.body.appendChild(ul);
+
+      document.addEventListener("click", function(event) {
+        if (!ul.contains(event.target)) {
+          var lista = ul.getElementsByTagName("li");
+          for (var i = 0; i < lista.length; i++) {
+            lista[i].textContent = vectorCreare[i];
+          }
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>

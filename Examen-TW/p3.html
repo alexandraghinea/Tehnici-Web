@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input type="button" id="buton1" value="1">
+  <input type="button" id="buton2" value="2">
+  <input type="button" id="buton3" value="3">
+  <input type="button" id="buton4" value="4">
+  <input type="button" id="buton5" value="5">
+  <script>
+    function schimbaCuloareSiSterge(buton) {
+      var culori = ['red', 'purple', 'green', 'blue', 'yellow'];
+      var indexRandom = Math.floor(Math.random() * 5);
+      buton.style.backgroundColor = culori[indexRandom];
+
+      setTimeout(function() {
+        buton.remove();
+        var remainingButtons = document.getElementsByTagName('input');
+        if (remainingButtons.length === 0) {
+          localStorage.setItem('primaCuloare', culori[indexRandom]);
+        }
+      }, 3000);
+    }
+    var primaCuloare = localStorage.getItem('primaCuloare');
+    if (primaCuloare) {
+      document.body.style.backgroundColor = primaCuloare;
+    }
+
+    document.addEventListener("keydown", function(event) {
+      var key = event.key;
+
+      if (key === '1') {
+        var buton1 = document.getElementById("buton1");
+        schimbaCuloareSiSterge(buton1);
+      } else if (key === '2') {
+        var buton2 = document.getElementById("buton2");
+        schimbaCuloareSiSterge(buton2);
+      } else if (key === '3') {
+        var buton3 = document.getElementById("buton3");
+        schimbaCuloareSiSterge(buton3);
+      } else if (key === '4') {
+        var buton4 = document.getElementById("buton4");
+        schimbaCuloareSiSterge(buton4);
+      } else if (key === '5') {
+        var buton5 = document.getElementById("buton5");
+        schimbaCuloareSiSterge(buton5);
+      }
+    });
+  </script>
+</body>
+</html>
