@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesaje</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .message-container {
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+  
+    .message {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+  
+    .message strong {
+      font-weight: bold;
+    }
+  
+    .message .nume {
+      color: blue;
+    }
+  
+    .message .mesaj {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+    <header id="#sus">
+  
+  
+        <link rel="stylesheet" href="css/proiect1.css" type="text/css">
+       
+        <h1>Blog de Calatorii</h1>
+        <img src="imagini/logo.jpg" alt="o poza" >
+      </header>
+      
+      <nav>
+        <ul class="meniu">
+            <li><a href="/proiect"><b>Acasă</b></a>
+            </li>
+          
+            <li><b>Destinații</b>
+              <ul class="submeniu">
+                  <li><a href="/soare">Soare</a></li>
+                  <li><a href="/natura">Natura</a></li>
+              </ul>
+                </li>
+        
+               <li><a href="/despre"><b>Despre</b></a></li> 
+               <li><a href="/contact"><b>Contact</b></a></li>
+          </ul>
+      </nav>
+
+      
+      <div class="message-container">
+      <h2>Mesaje</h2>
+      <% for (let i = 0; i < anonymousContacts.length; i++) { %>
+        <div class="message">
+          <strong>Nume:</strong> <span class="nume"><%= anonymousContacts[i].nume %></span><br>
+          <strong>Mesaj:</strong> <span class="mesaj"><%= anonymousContacts[i].mesaj %></span>
+        </div>
+      <% } %>
+    </div>
+</body>
+
+</html>

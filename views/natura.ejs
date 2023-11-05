@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de calatorie</title>
+</head>
+
+<body>
+
+<header id="#sus">
+  
+  
+  <link rel="stylesheet" href="css/proiect1.css" type="text/css">
+  <h1>Blog de Calatorii</h1>
+  <img src="imagini/logo.jpg" alt="o poza" >
+
+</header>
+
+<nav>
+  <ul class="meniu">
+      <li><a href="/proiect"><b>Acasă</b></a>
+      </li>
+    
+      <li><b>Destinații</b>
+        <ul class="submeniu">
+            <li><a href="/soare">Soare</a></li>
+            <li><a href="/natura">Natura</a></li>
+        </ul>
+          </li>
+  
+         <li><a href="/despre"><b>Despre</b></a></li> 
+         <li><a href="/contact"><b>Contact</b></a></li>
+    </ul>
+</nav>
+
+<div class="container">
+  <section id="acasa" class="bv">
+    <p>Călătoriile în natură sunt unele dintre cele mai căutate pentru cei care doresc să scape de agitația vieții de zi cu zi și să se cufunde în frumusețea lumii naturale. 
+      De la drumeții în munți până la explorarea adâncurilor unei păduri tropicale, există nenumărate destinații care oferă peisaje naturale uluitoare și șansa de a vă conecta cu natura. Unele destinații populare includ parcuri naționale precum Yellowstone și Yosemite din Statele Unite ale Americii, Banff și Jasper din Canada și Parcul Național Kruger din Africa de Sud.
+       Aceste destinații oferă o gamă largă de activități în aer liber, cum ar fi camping, drumeții, observarea faunei sălbatice și multe altele, făcându-le refugiul perfect pentru iubitorii de natură. 
+      </p>
+    </section>
+  <section id="tara2" class="destinatii">
+    <ul>
+      <li><img src="../Imagini/banf.jfif" alt="japonia" width="128" height="170" id="hp"></li>
+      <li><p><b>Banff</b>:</p></li> 
+        <li><p> 
+          Banff este un oraș de munte frumos din Alberta, Canada, cunoscut pentru frumusețea sa naturală uimitoare, lacurile cristaline și activitățile în aer liber. Turiștii pot explora Parcul Național Banff, pot face drumeții, schi sau snowboarding.        </p></li>
+     </ul>
+     <ul>
+      <li><img src="../Imagini/mai.jfif" alt="japonia" width="128" height="170" id="hp"></li>
+      <li><p><b>Chiang Mai</b>:</p></li> 
+      <li><p> 
+        Chiang Mai este un oraș situat în nordul Thailandei, înconjurat de munți și păduri luxuriante. Turiștii pot explora templele, pot vizita sanctuarele de elefanți, pot merge în drumeții în junglă sau pot lua un curs de gătit pentru a afla despre bucătăria locală.      </p></li>
+   </ul>
+   <ul>
+    <li><img src="../Imagini/alpii.jfif" alt="japonia" width="128" height="170" id="hp"></li>
+    <li><p><b>Alpii elvețieni</b>:</p></li> 
+    <li><p> 
+      Alpii elvețieni sunt un lanț muntos situat în Elveția, cunoscut pentru peisajele uimitoare, satele pitorești. Turiștii pot merge la schi sau snowboard, drumeții sau pot face o plimbare pitorească cu trenul pentru a experimenta frumusețea Alpilor.</p></li>
+ </ul>
+  </section> 
+ 
+</div>
+<h1>Blog</h1>
+<form id="articleForm">
+  <label for="titleInput">Titlu:</label>
+  <input type="text" id="titleInput" required>
+  <br>
+  <label for="contentInput">Continut:</label>
+  <textarea id="contentInput" required></textarea>
+  <br>
+  <button type="submit">Adauga articol</button>
+</form>
+
+<div id="articleList"></div>
+<footer>
+  <a class="hyperlink" href="#top">Inapoi la inceput</a>
+</footer>
+
+<script src="js/articole.js"></script>
+</body>
+</html>

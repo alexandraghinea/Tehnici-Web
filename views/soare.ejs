@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de calatorie</title>
+</head>
+
+<body>
+
+<header id="#sus">
+  
+  
+  <link rel="stylesheet" href="css/proiect1.css" type="text/css">
+  <h1>Blog de Calatorii</h1>
+  <img src="imagini/logo.jpg" alt="o poza" >
+</header>
+
+<nav>
+  <ul class="meniu">
+      <li><a href="/proiect"><b>Acasă</b></a>
+      </li>
+    
+      <li><b>Destinații</b>
+        <ul class="submeniu">
+            <li><a href="/soare">Soare</a></li>
+            <li><a href="/natura">Natura</a></li>
+        </ul>
+          </li>
+  
+         <li><a href="/despre"><b>Despre</b></a></li> 
+         <li><a href="/contact"><b>Contact</b></a></li>
+    </ul>
+</nav>
+
+<div class="container">
+  <section id="acasa" class="bv">
+    <p>Locurile însorite sunt populare pentru cei care iubesc vremea caldă. 
+      De la plaje tropicale la peisaje deșertice, există nenumărate destinații care oferă mult soare, nisip și distracție.
+       Unele destinații însorite populare includ Bali, Hawaii, Caraibe și Maldive, care oferă plaje curate, ape cristaline și o varietate de sporturi acvatice, cum ar fi surfing, snorkeling și scuba diving. 
+      Alte destinații includ orașe precum Miami și Los Angeles, care oferă o viață de noapte vibrantă, mese de clasă mondială și opțiuni nesfârșite de divertisment. Fie că sunteți în căutarea unei vacanțe relaxante la plajă sau a unei aventuri pline de acțiune, destinațiile însorite vă vor oferi cu siguranță fundalul perfect pentru următoarea dvs. escapadă.</p>
+    </section>
+  <section id="tara2" class="destinatii">
+    <ul>
+      <li><img src="../Imagini/bali.jfif" alt="japonia" width="128" height="170" id="hp"></li>
+      <li><p><b>Bali</b>:</p></li> 
+        <li><p>Bali este o insulă frumoasă din Indonezia, cunoscută pentru plajele sale uimitoare, cultura bogată și clima caldă. Turiștii se pot relaxa pe plajele frumoase, pot explora orezele și templele și se pot bucura de bucătăria locală delicioasă.</p></li>
+     </ul>
+     <ul>
+      <li><img src="../Imagini/cancun.jfif" alt="japonia" width="128" height="170" id="hp"></li>
+      <li><p><b>Cancun</b>:</p></li> 
+      <li><p> 
+        Cancun este o destinație populară pentru turiștii care caută o vacanță însorită. Orașul este cunoscut pentru plajele sale frumoase, viața de noapte vibrantă și ruinele antice Maya. Turiștii se pot bucura și de sporturi acvatice, cum ar fi snorkeling și scuba diving.      </p></li>
+   </ul>
+   <ul>
+    <li><img src="../Imagini/coasta.jfif" alt="japonia" width="128" height="170" id="hp"></li>
+    <li><p><b>Coasta de Azur</b>:</p></li> 
+    <li><p> 
+      Coasta de Aur este un oraș de coastă frumos din Queensland, Australia, cunoscut pentru plajele sale frumoase și vremea însorită. Turiștii se pot bucura de activități acvatice precum surfing, jet-ski, parasailing, pot vizita parcuri tematice, cum ar fi Dreamworld.</p></li>
+ </ul>
+  </section>
+</div>
+
+<h1>Blog</h1>
+<form id="articleForm">
+  <label for="titleInput">Titlu:</label>
+  <input type="text" id="titleInput" required>
+  <br>
+  <label for="contentInput">Continut:</label>
+  <textarea id="contentInput" required></textarea>
+  <br>
+  <button type="submit">Adauga articol</button>
+</form>
+
+<div id="articleList"></div>
+<footer>
+<footer>
+  <a class="hyperlink" href="#top">Inapoi la inceput</a>
+</footer>
+<script src="js/articole.js"></script>
+</body>
+</html>
